@@ -25,7 +25,8 @@ def sendMessage(client, text):
   try:
     response = client.chat_postMessage(
         channel='#peer_group_11',
-        text=text) #.get()
+        text=text
+        parse=full) #.get()
     # assert response["message"]["text"] == text
   except SlackApiError as e:
     # You will get a SlackApiError if "ok" is False
