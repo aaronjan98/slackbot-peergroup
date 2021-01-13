@@ -8,6 +8,9 @@ import schedule
 import time
 from datetime import datetime
 
+os.environ["TZ"] = 'America/Los_Angeles'
+time.tzset()
+
 env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
 
