@@ -6,5 +6,10 @@ import time
 os.environ["TZ"] = 'America/Los_Angeles'
 time.tzset()
 
-print('Date & Time:', datetime.today())
+datetime = datetime.today()
+
+file = open('hello_world.txt', 'a')
+file.write(f'Date & Time: {datetime}\n')
+file.close()
+
 sys.exit(f"Successfull")
